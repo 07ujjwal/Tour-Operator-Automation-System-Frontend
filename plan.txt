@@ -1,0 +1,24 @@
+src/
+├── components/
+│   ├── auth/
+│   │   ├── Login.jsx
+│   │   └── Signup.jsx
+│   ├── dashboard/
+│   │   └── Dashboard.jsx
+│   ├── common/
+│   │   └── Header.jsx
+├── hooks/
+│   ├── useAuth.js
+│   ├── useDashboard.js
+│   └── useFormHandler.js
+├── services/
+│   ├── api.js
+│   ├── authService.js
+│   └── userService.js
+├── store/
+│   ├── authStore.js
+│   ├── userStore.js
+│   └── dashboardStore.js
+├── queryClient.js
+├── main.jsx
+└── index.css
