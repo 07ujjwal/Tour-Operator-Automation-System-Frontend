@@ -1,15 +1,24 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import AuthPage from "./pages/auth/authPage";
+import Home from "./pages/home/Home";
+import AuthPage from "./pages/auth/AuthPage";
+import ProtectedRoute from "./components/ProtectedRoute";
+import ToursPage from "./pages/ToursPage/ToursPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/">
-          {/* <Route index element={<Home />} /> */}
-          <Route path="login" element={<AuthPage />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="login" element={<AuthPage />} />
+        <Route
+          path="tours"
+          element={
+            <ProtectedRoute>
+              <ToursPage />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

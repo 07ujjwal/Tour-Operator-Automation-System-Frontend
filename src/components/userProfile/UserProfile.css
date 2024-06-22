@@ -1,0 +1,79 @@
+.user-profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+.user-info:hover {
+  background-color: #4d3d3d;
+}
+
+.user-photo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #fce7e7;
+  flex: 1;
+}
+
+.caret-icon {
+  margin-left: auto;
+  font-size: 14px;
+  color: #e4dfdf;
+  margin: 2px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 160px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  list-style-type: none;
+  padding: 8px 0;
+  z-index: 1000;
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f5f5f5;
+}
+
+.fa {
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+  .user-info {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 468px) {
+  .user-profile {
+    display: none;
+  }
+}

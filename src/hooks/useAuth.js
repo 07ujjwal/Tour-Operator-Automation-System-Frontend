@@ -3,17 +3,17 @@ import useAuthStore from "../store/authStore";
 import { login, signUp } from "../services/api";
 
 const useAuth = () => {
-  const setUser = useAuthStore((state) => state.setUser);
+  const setAuth = useAuthStore((state) => state.setAuth);
 
   const loginMutation = useMutation((credentials) => login(credentials), {
     onSuccess: (data) => {
-      setUser(data.user);
+      setAuth(data);
     },
   });
 
   const signUpMutation = useMutation((credentials) => signUp(credentials), {
     onSuccess: (data) => {
-      setUser(data.user);
+      setAuth(data);
     },
   });
 

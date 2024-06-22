@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import "./Login.css";
 import useAuth from "../../../hooks/useAuth";
+import useAuthStore from "../../../store/authStore";
 
 function Login() {
   const {
@@ -10,6 +11,9 @@ function Login() {
   } = useForm();
 
   const { loginMutation, isLoading, isError, error } = useAuth();
+
+  const { user } = useAuthStore.getState();
+  console.log(user);
 
   const onSubmit = async (data) => {
     try {
