@@ -1,7 +1,7 @@
-import React from "react";
 import "./Header.css";
 import UserProfile from "../userProfile/UserProfile";
 import useAuthStore from "../../store/authStore";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { user } = useAuthStore.getState();
@@ -9,13 +9,15 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="navbar">
-        <div className="logo">TravelZone</div>
+        <Link to={"/"} className="logo">
+          TravelZone
+        </Link>
         <ul className="nav-links">
           <li>
             <a href="#home">Home</a>
           </li>
           <li>
-            <a href="#about">About Us</a>
+            <Link to={"aboutUs"}>About Us</Link>
           </li>
           <li>
             <a href="#blog">Blog</a>

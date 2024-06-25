@@ -11,6 +11,7 @@ const api = axios.create({
 api.interceptors.request.use(
   (config) => {
     const { token } = useAuthStore.getState();
+    console.log("Authorization token:", token);
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -70,4 +71,5 @@ export const signUp = async (credentials) => {
     throw error;
   }
 };
+
 export default api;

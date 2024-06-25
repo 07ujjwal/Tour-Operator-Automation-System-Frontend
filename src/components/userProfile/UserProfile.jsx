@@ -1,5 +1,3 @@
-// UserProfile.js
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./UserProfile.css";
@@ -9,7 +7,6 @@ import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 const UserProfile = () => {
   const { user, clearAuth } = useAuthStore.getState(); // Get user and clearAuth function from store
-
   const [dropdownOpen, setDropdownOpen] = useState(false); // State to manage dropdown visibility
 
   const toggleDropdown = () => {
